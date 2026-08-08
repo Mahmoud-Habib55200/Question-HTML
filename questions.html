@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+@page {
+    size: A4;
+    margin: 2cm 1.6cm;
+    @bottom-center {
+        content: "أكاديمية حبيب — بنك أسئلة HTML";
+        font-family: 'Cairo', sans-serif; font-size: 9px; color: #94a3b8;
+    }
+    @bottom-left {
+        content: counter(page);
+        font-family: 'Cairo', sans-serif; font-size: 11px; color: #6366F1; font-weight: 700;
+    }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; color: #1e293b; line-height: 1.8; font-size: 12px; }
+
+.cover {
+    text-align: center; padding-top: 30%; height: 100vh; page-break-after: always;
+    background: linear-gradient(135deg, #6366F1 0%, #EC4899 100%);
+    color: white; margin: -2cm -1.6cm; padding-left: 1.6cm; padding-right: 1.6cm;
+}
+.cover h1 { font-size: 44px; font-weight: 900; margin-bottom: 16px; }
+.cover .sub { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 30px; }
+.cover .badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4); border-radius: 40px;
+    padding: 10px 28px; font-size: 16px; font-weight: 700; margin-bottom: 40px;
+}
+.cover .meta { margin-top: 30px; font-size: 15px; opacity: 0.9; line-height: 2.2; }
+
+.section-title {
+    background: linear-gradient(135deg, #6366F1 0%, #818cf8 100%);
+    color: white; padding: 11px 18px; border-radius: 10px;
+    margin: 22px 0 14px 0; page-break-after: avoid;
+    font-size: 18px; font-weight: 800;
+}
+.section-title.first { margin-top: 4px; }
+
+.q {
+    background: #f8fafc; border-right: 4px solid #EC4899; border-radius: 8px;
+    padding: 9px 14px 9px 14px; margin-bottom: 8px; page-break-inside: avoid;
+    display: flex; gap: 10px;
+}
+.q .num {
+    color: #6366F1; font-weight: 800; font-size: 13px; min-width: 26px;
+}
+.q .txt { color: #334155; font-size: 12.5px; }
+.intro {
+    background: #EEF0FF; border-radius: 10px; padding: 14px 18px;
+    font-size: 12.5px; color: #1e40af; margin-bottom: 8px; line-height: 1.7;
+}
+code {
+    background: #1e1b3a; color: #a5f3fc; padding: 1px 6px; border-radius: 4px;
+    font-family: 'Courier New', monospace; font-size: 11.5px; direction: ltr; display: inline-block;
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+    <div class="badge">📝 بنك أسئلة</div>
+    <h1>٥٠ سؤال في HTML</h1>
+    <div class="sub">أسئلة استفهامية شاملة</div>
+    <div class="meta">
+        أكاديمية حبيب<br>
+        من الأساسيات للتقسيم والتنظيم<br>
+        مناسبة للمراجعة والإنترفيوهات
+    </div>
+</div>
+
+<div class="intro">
+    الأسئلة دي بتغطّي كل اللي اتعلمناه في HTML — من الأساسيات لحد التقسيم بالـ Divs.
+    خليك بتجاوب عليها بكلماتك، لأن ده بيثبّت الفهم أكتر من الحفظ.
+    وأي سؤال متعرفش إجابته، ده معناه إن فيه جزء محتاج ترجعله. بالتوفيق ❤️
+</div>
+
+<div class="section-title first">١. الأساسيات ومفهوم HTML</div>
+
+<div class="q"><div class="num">1</div><div class="txt">يعني إيه HTML، وإيه دورها الأساسي في بناء أي موقع؟</div></div>
+<div class="q"><div class="num">2</div><div class="txt">ليه بنبدأ تعلم تطوير الويب بـ HTML بالذات قبل أي حاجة تانية؟</div></div>
+<div class="q"><div class="num">3</div><div class="txt">مين اللي بيقرا كود الـ HTML ويحوّله لموقع بنشوفه قدامنا؟</div></div>
+<div class="q"><div class="num">4</div><div class="txt">إيه الفرق بين دور الـ HTML ودور الـ CSS ودور الـ JavaScript في الصفحة؟</div></div>
+<div class="q"><div class="num">5</div><div class="txt">لو كتبت كود HTML فيه غلطة، هل المتصفح بيصلّحها من عنده؟ وليه؟</div></div>
+<div class="q"><div class="num">6</div><div class="txt">يعني إيه Tag (وسم)، وإزاي بيتكوّن؟</div></div>
+<div class="q"><div class="num">7</div><div class="txt">إيه الفرق بين الوسم اللي بيتفتح ويتقفل (زي <code>&lt;p&gt;&lt;/p&gt;</code>) والوسم اللي بيتكتب مرة واحدة (زي <code>&lt;br&gt;</code>)؟</div></div>
+<div class="q"><div class="num">8</div><div class="txt">يعني إيه Element (عنصر) في HTML؟</div></div>
+
+<div class="section-title">٢. الهيكل الأساسي للصفحة</div>
+
+<div class="q"><div class="num">9</div><div class="txt">إيه وظيفة <code>&lt;!DOCTYPE html&gt;</code> في أول الصفحة؟</div></div>
+<div class="q"><div class="num">10</div><div class="txt">إيه الفرق بين الـ <code>&lt;head&gt;</code> والـ <code>&lt;body&gt;</code>؟ وإيه اللي بيتحط في كل واحد؟</div></div>
+<div class="q"><div class="num">11</div><div class="txt">إيه وظيفة وسم <code>&lt;title&gt;</code>، وفين بيظهر محتواه؟</div></div>
+<div class="q"><div class="num">12</div><div class="txt">ليه بنسمّي الصفحة الرئيسية في أي موقع <code>index.html</code> بالذات؟</div></div>
+<div class="q"><div class="num">13</div><div class="txt">إيه أهمية امتداد <code>.html</code> في اسم الملف؟</div></div>
+
+<div class="section-title">٣. العناوين والفقرات والنصوص</div>
+
+<div class="q"><div class="num">14</div><div class="txt">إيه الفرق بين <code>&lt;h1&gt;</code> و <code>&lt;h6&gt;</code>؟</div></div>
+<div class="q"><div class="num">15</div><div class="txt">ليه مش المفروض نستخدم أكتر من <code>&lt;h1&gt;</code> واحد في الصفحة بشكل عام؟</div></div>
+<div class="q"><div class="num">16</div><div class="txt">إيه وظيفة وسم <code>&lt;p&gt;</code>؟</div></div>
+<div class="q"><div class="num">17</div><div class="txt">إيه الفرق بين <code>&lt;strong&gt;</code> و <code>&lt;em&gt;</code>؟</div></div>
+<div class="q"><div class="num">18</div><div class="txt">إيه وظيفة وسم <code>&lt;br&gt;</code>، وإمتى نحتاجه؟</div></div>
+
+<div class="section-title">٤. القوايم والصور والروابط</div>
+
+<div class="q"><div class="num">19</div><div class="txt">إيه الفرق بين <code>&lt;ul&gt;</code> و <code>&lt;ol&gt;</code>؟</div></div>
+<div class="q"><div class="num">20</div><div class="txt">إيه وظيفة وسم <code>&lt;li&gt;</code>، وبيتحط جوّا إيه؟</div></div>
+<div class="q"><div class="num">21</div><div class="txt">إيه الوسم اللي بنستخدمه لإضافة صورة في الصفحة؟</div></div>
+<div class="q"><div class="num">22</div><div class="txt">إيه أهمية خاصية <code>src</code> في وسم الصورة؟</div></div>
+<div class="q"><div class="num">23</div><div class="txt">إيه فايدة خاصية <code>alt</code> في الصورة؟ وإيه اللي بيحصل لو الصورة معرفتش تظهر؟</div></div>
+<div class="q"><div class="num">24</div><div class="txt">إيه الوسم اللي بنعمل بيه رابط (link)؟</div></div>
+<div class="q"><div class="num">25</div><div class="txt">إيه وظيفة خاصية <code>href</code> في الرابط؟</div></div>
+<div class="q"><div class="num">26</div><div class="txt">إزاي تخلّي الرابط يفتح في تاب جديد؟</div></div>
+
+<div class="section-title">٥. الجداول (Tables)</div>
+
+<div class="q"><div class="num">27</div><div class="txt">إمتى نحتاج نستخدم جدول في الصفحة؟</div></div>
+<div class="q"><div class="num">28</div><div class="txt">إيه وظيفة وسم <code>&lt;table&gt;</code>؟</div></div>
+<div class="q"><div class="num">29</div><div class="txt">إيه اللي بيعمله وسم <code>&lt;tr&gt;</code>، وإيه اختصاره؟</div></div>
+<div class="q"><div class="num">30</div><div class="txt">إيه الفرق بين <code>&lt;td&gt;</code> و <code>&lt;th&gt;</code>؟</div></div>
+<div class="q"><div class="num">31</div><div class="txt">ليه المتصفح بيعرض محتوى <code>&lt;th&gt;</code> غامق وفي النص أوتوماتيك؟</div></div>
+<div class="q"><div class="num">32</div><div class="txt">لو عايز تعمل جدول من ٣ صفوف و٢ أعمدة، هتحتاج كام <code>&lt;tr&gt;</code> وكام <code>&lt;td&gt;</code>؟</div></div>
+
+<div class="section-title">٦. الوسائط (الفيديو والصوت)</div>
+
+<div class="q"><div class="num">33</div><div class="txt">إيه الوسم اللي بنستخدمه لإضافة فيديو للصفحة؟</div></div>
+<div class="q"><div class="num">34</div><div class="txt">إيه الوسم اللي بنستخدمه لإضافة صوت للصفحة؟</div></div>
+<div class="q"><div class="num">35</div><div class="txt">إيه فايدة خاصية <code>controls</code> في الفيديو والصوت؟</div></div>
+<div class="q"><div class="num">36</div><div class="txt">إيه الفرق في الاستخدام بين وسم الصورة ووسم الفيديو؟</div></div>
+
+<div class="section-title">٧. الخصائص (Attributes)</div>
+
+<div class="q"><div class="num">37</div><div class="txt">يعني إيه Attribute (خاصية) في HTML بشكل عام؟</div></div>
+<div class="q"><div class="num">38</div><div class="txt">فين بيتحط الـ Attribute بالنسبة للوسم؟</div></div>
+<div class="q"><div class="num">39</div><div class="txt">اذكر ٣ أمثلة لخصائص اتعلمتها وإيه وظيفة كل واحدة.</div></div>
+<div class="q"><div class="num">40</div><div class="txt">هل كل الوسوم لازم يكون ليها خصائص؟ ولا الخصائص اختيارية؟</div></div>
+
+<div class="section-title">٨. تقسيم الصفحة (Divs & Spans)</div>
+
+<div class="q"><div class="num">41</div><div class="txt">يعني إيه <code>&lt;div&gt;</code>، وليه بنستخدمه؟</div></div>
+<div class="q"><div class="num">42</div><div class="txt">إيه اختصار كلمة <code>div</code>، وإيه معناها؟</div></div>
+<div class="q"><div class="num">43</div><div class="txt">إيه الفرق بين <code>&lt;div&gt;</code> و <code>&lt;span&gt;</code>، وإمتى تستخدم كل واحد؟</div></div>
+<div class="q"><div class="num">44</div><div class="txt">ليه بنقول إن الـ <code>&lt;div&gt;</code> بياخد سطر كامل، والـ <code>&lt;span&gt;</code> بيفضل جوّا السطر؟</div></div>
+<div class="q"><div class="num">45</div><div class="txt">إزاي تقسيم الصفحة بالـ Divs بيساعدنا لما نيجي نشتغل بالـ CSS؟</div></div>
+
+<div class="section-title">٩. الـ Class والـ ID</div>
+
+<div class="q"><div class="num">46</div><div class="txt">إيه الفرق الأساسي بين الـ <code>class</code> والـ <code>id</code>؟</div></div>
+<div class="q"><div class="num">47</div><div class="txt">هل ينفع أكتر من عنصر ياخدوا نفس الـ <code>class</code>؟ وليه؟</div></div>
+<div class="q"><div class="num">48</div><div class="txt">هل ينفع أكتر من عنصر ياخدوا نفس الـ <code>id</code>؟ وليه؟</div></div>
+<div class="q"><div class="num">49</div><div class="txt">لو عندك عنصر مميز واحد في الصفحة عايز تتحكم فيه لوحده، تستخدم <code>class</code> ولا <code>id</code>؟</div></div>
+<div class="q"><div class="num">50</div><div class="txt">ليه الـ <code>class</code> والـ <code>id</code> مهمين جداً لما نيجي نشتغل بالـ CSS والـ JavaScript؟</div></div>
+
+</body>
+</html>
