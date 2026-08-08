@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+@page {
+    size: A4;
+    margin: 2cm 1.6cm;
+    @bottom-center {
+        content: "أكاديمية حبيب — بنك أسئلة HTML";
+        font-family: 'Cairo', sans-serif; font-size: 9px; color: #94a3b8;
+    }
+    @bottom-left {
+        content: counter(page);
+        font-family: 'Cairo', sans-serif; font-size: 11px; color: #6366F1; font-weight: 700;
+    }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; color: #1e293b; line-height: 1.8; font-size: 12px; }
+
+.cover {
+    text-align: center; padding-top: 30%; height: 100vh; page-break-after: always;
+    background: linear-gradient(135deg, #6366F1 0%, #EC4899 100%);
+    color: white; margin: -2cm -1.6cm; padding-left: 1.6cm; padding-right: 1.6cm;
+}
+.cover h1 { font-size: 44px; font-weight: 900; margin-bottom: 16px; }
+.cover .sub { font-size: 20px; font-weight: 600; opacity: 0.95; margin-bottom: 30px; }
+.cover .badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4); border-radius: 40px;
+    padding: 10px 28px; font-size: 16px; font-weight: 700; margin-bottom: 40px;
+}
+.cover .meta { margin-top: 30px; font-size: 15px; opacity: 0.9; line-height: 2.2; }
+
+.section-title {
+    background: linear-gradient(135deg, #6366F1 0%, #818cf8 100%);
+    color: white; padding: 11px 18px; border-radius: 10px;
+    margin: 22px 0 14px 0; page-break-after: avoid;
+    font-size: 18px; font-weight: 800;
+}
+.section-title.first { margin-top: 4px; }
+
+.q {
+    background: #f8fafc; border-right: 4px solid #EC4899; border-radius: 8px;
+    padding: 9px 14px 9px 14px; margin-bottom: 8px; page-break-inside: avoid;
+    display: flex; gap: 10px;
+}
+.q .num {
+    color: #6366F1; font-weight: 800; font-size: 13px; min-width: 26px;
+}
+.q .txt { color: #334155; font-size: 12.5px; }
+.intro {
+    background: #EEF0FF; border-radius: 10px; padding: 14px 18px;
+    font-size: 12.5px; color: #1e40af; margin-bottom: 8px; line-height: 1.7;
+}
+code {
+    background: #1e1b3a; color: #a5f3fc; padding: 1px 6px; border-radius: 4px;
+    font-family: 'Courier New', monospace; font-size: 11.5px; direction: ltr; display: inline-block;
+}
